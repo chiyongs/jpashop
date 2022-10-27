@@ -22,6 +22,9 @@ public class MemberRepositoryTest {
   @Rollback(false)
   public void testMember() throws Exception {
     //given
+    Member member = new Member();
+    member.setName("memberA");
 
+    memberRepository.save(member);
   }
 }
